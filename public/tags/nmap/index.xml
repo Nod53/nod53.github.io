@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nmap on Nod&#39;s Notes</title>
+    <link>http://localhost:1313/tags/nmap/</link>
+    <description>Recent content in Nmap on Nod&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 22 Jul 2024 18:42:43 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nmap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTF Blue THM</title>
+      <link>http://localhost:1313/posts/2024/07/ctf-blue-thm/</link>
+      <pubDate>Mon, 22 Jul 2024 18:42:43 +1000</pubDate>
+      <guid>http://localhost:1313/posts/2024/07/ctf-blue-thm/</guid>
+      <description>TryHackMe CTF: Blue Room Writeup https://tryhackme.com/r/room/blue Room Information&#xA;This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.&#xA;Initial Scanning&#xA;I started by running an Nmap scan on the target IP address:&#xA;sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open ports:</description>
+    </item>
+  </channel>
+</rss>

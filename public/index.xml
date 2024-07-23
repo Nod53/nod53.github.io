@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nod&#39;s Notes</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Nod&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 22 Jul 2024 18:42:43 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTF Blue THM</title>
+      <link>http://localhost:1313/posts/2024/07/ctf-blue-thm/</link>
+      <pubDate>Mon, 22 Jul 2024 18:42:43 +1000</pubDate>
+      <guid>http://localhost:1313/posts/2024/07/ctf-blue-thm/</guid>
+      <description>TryHackMe CTF: Blue Room Writeup&#xA;https://tryhackme.com/r/room/blue&#xA;Room Information&#xA;This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.&#xA;Initial Scanning&#xA;I started by running an Nmap scan on the target IP address:&#xA;sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open ports:</description>
+    </item>
+    <item>
+      <title>Hello World.</title>
+      <link>http://localhost:1313/posts/2024/07/hello-world./</link>
+      <pubDate>Mon, 15 Jul 2024 14:09:52 +1000</pubDate>
+      <guid>http://localhost:1313/posts/2024/07/hello-world./</guid>
+      <description>Welcome to my blog! This initial post serves as a test to ensure everything is functioning correctly. Stay tuned for more updates and content.</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Tue, 15 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>Hi, I&amp;rsquo;m Jarrod, but you may also know me as Nod. I&amp;rsquo;m a tech enthusiast with over a decade of experience in the telecommunications industry and a dedicated student of cybersecurity. My journey into cybersecurity is driven by curiosity and a desire to protect digital environments.&#xA;My Background With ten years in telecommunications, I&amp;rsquo;ve built a strong foundation in networking and IT support. Currently, I&amp;rsquo;m studying Cybersecurity at university and, in my spare time, learning on platforms like TryHackMe and HackTheBox.</description>
+    </item>
+  </channel>
+</rss>

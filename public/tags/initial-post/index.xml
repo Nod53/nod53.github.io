@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Initial Post on Nod&#39;s Notes</title>
+    <link>http://localhost:1313/tags/initial-post/</link>
+    <description>Recent content in Initial Post on Nod&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 15 Jul 2024 14:09:52 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/initial-post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World.</title>
+      <link>http://localhost:1313/posts/2024/07/hello-world./</link>
+      <pubDate>Mon, 15 Jul 2024 14:09:52 +1000</pubDate>
+      <guid>http://localhost:1313/posts/2024/07/hello-world./</guid>
+      <description>Welcome to my blog! This initial post serves as a test to ensure everything is functioning correctly. Stay tuned for more updates and content.</description>
+    </item>
+  </channel>
+</rss>

