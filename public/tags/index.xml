@@ -17,6 +17,13 @@
       <description></description>
     </item>
     <item>
+      <title>EternalBlue</title>
+      <link>http://localhost:1313/tags/eternalblue/</link>
+      <pubDate>Mon, 22 Jul 2024 18:42:43 +1000</pubDate>
+      <guid>http://localhost:1313/tags/eternalblue/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Metasploit</title>
       <link>http://localhost:1313/tags/metasploit/</link>
       <pubDate>Mon, 22 Jul 2024 18:42:43 +1000</pubDate>
@@ -28,6 +35,13 @@
       <link>http://localhost:1313/tags/meterpreter/</link>
       <pubDate>Mon, 22 Jul 2024 18:42:43 +1000</pubDate>
       <guid>http://localhost:1313/tags/meterpreter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MS17_010</title>
+      <link>http://localhost:1313/tags/ms17_010/</link>
+      <pubDate>Mon, 22 Jul 2024 18:42:43 +1000</pubDate>
+      <guid>http://localhost:1313/tags/ms17_010/</guid>
       <description></description>
     </item>
     <item>

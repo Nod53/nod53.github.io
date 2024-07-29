@@ -6,21 +6,21 @@ aliases = ["about-me"]
   name = "Nod"
 +++
 
-Hi, I'm Jarrod, but you may also know me as Nod. I'm a tech enthusiast with over a decade of experience in the telecommunications industry and a dedicated student of cybersecurity. My journey into cybersecurity is driven by curiosity and a desire to protect digital environments.
+Hey there! I'm Jarrod, but most folks know me as Nod. I'm a tech enthusiast with over ten years in the telecommunications industry and a dedicated cybersecurity student. My passion for cybersecurity comes from my curiosity and a strong desire to protect our digital world.
 
-### My Background
+## My Journey
 
-With ten years in telecommunications, I've built a strong foundation in networking and IT support. Currently, I'm studying Cybersecurity at university and, in my spare time, learning on platforms like TryHackMe and HackTheBox.
+After a decade in telecommunications, I've gained a solid foundation in networking and IT support. I'm currently studying cybersecurity at university, and I spend my free time learning on platforms like TryHackMe and HackTheBox.
 
-### What You'll Find Here
+## What You'll Find Here
 
-- **Writeups:** Experiences with platforms like TryHackMe and HackTheBox.
+- **Writeups:** My experiences with platforms like TryHackMe and HackTheBox.
 - **Notes:** Guides and notes on various cybersecurity topics and tools.
 - **Projects:** Insights into my network security analyses and automation scripts.
-- **Resources:** Useful books, courses, and tools I've discovered.
+- **Resources:** Great books, courses, and tools I've discovered along the way.
 
-### Let's Connect
+## Let's Connect
 
-You can find me on [Twitter: @NodInfoSec](https://twitter.com/NodInfoSec). Feel free to reach out for questions, suggestions, or to connect.
+You can find me on [Twitter: @NodInfoSec](https://twitter.com/NodInfoSec). Feel free to reach out with any questions, suggestions, or just to say hi.
 
-Thanks for visiting!
+Thanks for stopping by!
