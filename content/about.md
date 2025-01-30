@@ -8,7 +8,7 @@ aliases = ["about-me"]
 
 # **About Me**
 
-Hey there! I'm **Jarrod**, but most folks know me as **Nod**. I'm a tech enthusiast with over **ten years of experience in the telecommunications industry** and a dedicated **cybersecurity professional**. My passion for cybersecurity stems from my curiosity and a strong desire to **protect our digital world**.  
+Hey there! I'm **Jarrod**, but most folks know me as **Nod**. I'm a tech enthusiast located in Australia with over **ten years of experience in the telecommunications industry** and a dedicated **cybersecurity professional**. My passion for cybersecurity stems from my curiosity and a strong desire to **protect our digital world**.  
 
 ## **My Cybersecurity Journey**  
 
