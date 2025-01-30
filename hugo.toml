@@ -235,9 +235,9 @@ disableHugoGeneratorInject = false
     name = "tryhackme"
     url  = "https://tryhackme.com/p/nodonthm"
 	
-  [[params.social]]
-    name = "hackthebox"
-    url  = "coming soon"
+  #[[params.social]]
+  #  name = "hackthebox"
+  #  url  = "coming soon"
 
 
 [languages]
@@ -262,3 +262,7 @@ disableHugoGeneratorInject = false
     identifier = "posts"
     name       = "./posts"
     url        = "posts/"
+  #[[menu.main]]
+  #  identifier = "resume"
+  #  name       = "./resume"
+  #  url        = "resume/"

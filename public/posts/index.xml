@@ -6,8 +6,67 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 22 Jul 2024 18:42:43 +1000</lastBuildDate>
+        <lastBuildDate>Thu, 30 Jan 2025 16:51:40 +1100</lastBuildDate>
         <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>The Monthly Patch 2025.01</title>
+            <link>http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/</link>
+            <pubDate>Thu, 30 Jan 2025 16:51:40 +1100</pubDate>
+            
+            <guid>http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/</guid>
+            <description>The Monthly Patch 2025.01 Welcome to The Monthly Patch, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:
+To serve as a motivational tool—tracking my progress and pushing myself to continuously improve. To provide a transparent record of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth. Each month, I&amp;rsquo;ll cover my progress, learning experiences, projects, and future goals.</description>
+            <content type="html"><![CDATA[<h1 id="the-monthly-patch-202501"><strong>The Monthly Patch 2025.01</strong></h1>
+<p>Welcome to <strong>The Monthly Patch</strong>, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:</p>
+<ol>
+<li>To serve as a <strong>motivational tool</strong>—tracking my progress and pushing myself to continuously improve.</li>
+<li>To provide a <strong>transparent record</strong> of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth.</li>
+</ol>
+<p>Each month, I&rsquo;ll cover my progress, learning experiences, projects, and future goals. Now, let&rsquo;s dive into <strong>January 2025</strong>!</p>
+<hr>
+<h2 id="-wrapping-up-2024-my-cybersecurity-milestone"><strong>📜 Wrapping Up 2024: My Cybersecurity Milestone</strong></h2>
+<p>December 2024 was a <strong>major milestone</strong> for me—I officially <strong>graduated with a Diploma of Cybersecurity with Distinction</strong>, achieving a <strong>GPA of 6.5</strong>. This was a huge accomplishment after a full year of intense study.</p>
+<p>To celebrate, I took the rest of December off to <strong>spend time with family, unwind, and recharge</strong> after a demanding academic year.</p>
+<hr>
+<h2 id="-january-the-job-hunt-begins"><strong>🚀 January: The Job Hunt Begins</strong></h2>
+<p>With the new year in full swing, I shifted my focus to landing a cybersecurity role. This month, I:</p>
+<ul>
+<li><strong>Refined my resume</strong> and <strong>updated my LinkedIn</strong> and other job-seeking profiles.</li>
+<li><strong>Applied for around 40 jobs</strong> in cybersecurity-related fields. While this isn’t a massive number, I wanted to <strong>prioritise quality over quantity</strong>—tailoring applications for roles that align with my interests and skillset.</li>
+<li>My goal for <strong>February</strong> is to <strong>increase applications</strong> while securing interviews and, ideally, receiving offers.</li>
+</ul>
+<hr>
+<h2 id="-getting-back-to-hands-on-learning"><strong>💻 Getting Back to Hands-On Learning</strong></h2>
+<p>Now that my formal studies are complete, I’m <strong>returning to TryHackMe</strong> to continue upskilling. Specifically, I aim to:</p>
+<p>✅ <strong>Complete the SOC Level 1 Learning Path</strong> before the end of February.</p>
+<p>I’ve also started the <strong>Google Cybersecurity Certificate on Coursera</strong>. Although it’s structured as a 3–6 month program (at 7 hours per week), I believe my existing knowledge will allow me to <strong>fast-track my progress and complete it in February</strong>.</p>
+<hr>
+<h2 id="-expanding-my-knowledge-base"><strong>📝 Expanding My Knowledge Base</strong></h2>
+<p>I’ve been maintaining cybersecurity notes in <strong>Obsidian</strong>, and I plan to:</p>
+<ul>
+<li>Continue <strong>expanding my notes</strong> with key concepts, attack techniques, and defensive strategies.</li>
+<li>Explore <strong>alternative platforms</strong> in case I find a more efficient solution for managing and organizing my cybersecurity knowledge.</li>
+</ul>
+<hr>
+<h2 id="-staying-up-to-date-with-industry-trends"><strong>🌍 Staying Up to Date with Industry Trends</strong></h2>
+<p>Keeping up with industry developments is crucial, so I’ve been:</p>
+<ul>
+<li><strong>Watching Simply Cyber&rsquo;s Daily Cyber Threat Brief</strong> with Gerald Auger to stay informed on real-world cybersecurity threats.</li>
+<li>Exploring <strong>SIEM lab projects</strong>, inspired by one of Gerald Auger’s videos on <strong>building a home SIEM setup</strong> to practice detecting, analyzing, and responding to security events.</li>
+</ul>
+<p>My plan for <strong>February</strong> is to <strong>set up a SIEM lab</strong> in my home lab environment, so I can better understand <strong>log analysis, alerts, and security monitoring</strong>.</p>
+<hr>
+<h2 id="-looking-ahead-february-2025-goals"><strong>🎯 Looking Ahead: February 2025 Goals</strong></h2>
+<p>🔥 <strong>Increase job applications and secure interviews.</strong><br>
+🔥 <strong>Complete the TryHackMe SOC Level 1 Learning Path.</strong><br>
+🔥 <strong>Finish the Google Cybersecurity Certificate on Coursera.</strong><br>
+🔥 <strong>Build a SIEM lab in my home environment.</strong><br>
+🔥 <strong>Continue expanding and refining my knowledge base.</strong></p>
+<p>Wrapping up, I feel a <strong>strong sense of accomplishment</strong> from graduating in December, but I know <strong>this is just the beginning</strong>. Cybersecurity is a field of continuous learning, and I’m excited for the next steps in my journey.</p>
+<p>Let’s make February a productive month! 💪</p>
+]]></content>
+        </item>
         
         <item>
             <title>CTF Blue THM</title>

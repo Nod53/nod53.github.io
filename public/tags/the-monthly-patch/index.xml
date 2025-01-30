@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Monthly Patch on Nod&#39;s Notes</title>
+    <link>http://localhost:1313/tags/the-monthly-patch/</link>
+    <description>Recent content in The Monthly Patch on Nod&#39;s Notes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 30 Jan 2025 16:51:40 +1100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/the-monthly-patch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Monthly Patch 2025.01</title>
+      <link>http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/</link>
+      <pubDate>Thu, 30 Jan 2025 16:51:40 +1100</pubDate>
+      <guid>http://localhost:1313/posts/2025/01/the-monthly-patch-2025.01/</guid>
+      <description>The Monthly Patch 2025.01 Welcome to The Monthly Patch, a new blog series where I document my cybersecurity journey, both personal and professional. My goal with this blog is twofold:&#xA;To serve as a motivational tool—tracking my progress and pushing myself to continuously improve. To provide a transparent record of my learning journey—allowing potential employers and like-minded professionals to see my dedication to cybersecurity growth. Each month, I&amp;rsquo;ll cover my progress, learning experiences, projects, and future goals.</description>
+    </item>
+  </channel>
+</rss>

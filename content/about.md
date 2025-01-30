@@ -43,8 +43,6 @@ This site serves as a **living journal** of my cybersecurity journey. Here’s w
 
 ## **Let’s Connect!**  
 
-I'm always open to **networking, collaborations, and learning opportunities**. Feel free to reach out!  
-
-🐦 **Twitter/X:** [@NodInfoSec](https://twitter.com/NodInfoSec) 
+I'm always open to **networking, collaborations, and learning opportunities**. Feel free to reach out, you will find the best way to reach me on the [home page](https://nodonline.xyz/)  
 
 Thanks for stopping by, and I hope you’ll follow along on [**The Monthly Patch**](https://nodonline.xyz/tags/the-monthly-patch/) to track my journey in cybersecurity! 🚀 
