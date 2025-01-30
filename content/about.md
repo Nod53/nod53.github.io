@@ -1,26 +1,50 @@
 +++
 title = "About Me"
-date = "2014-07-15"
+date = "2025-01-30"
 aliases = ["about-me"]
 [ author ]
   name = "Nod"
 +++
 
-Hey there! I'm Jarrod, but most folks know me as Nod. I'm a tech enthusiast with over ten years in the telecommunications industry and a dedicated cybersecurity student. My passion for cybersecurity comes from my curiosity and a strong desire to protect our digital world.
+# **About Me**
 
-## My Journey
+Hey there! I'm **Jarrod**, but most folks know me as **Nod**. I'm a tech enthusiast with over **ten years of experience in the telecommunications industry** and a dedicated **cybersecurity professional**. My passion for cybersecurity stems from my curiosity and a strong desire to **protect our digital world**.  
 
-After a decade in telecommunications, I've gained a solid foundation in networking and IT support. I'm currently studying cybersecurity at university, and I spend my free time learning on platforms like TryHackMe and HackTheBox.
+## **My Cybersecurity Journey**  
 
-## What You'll Find Here
+After a decade in **telecommunications**, where I built a solid foundation in **networking, IT support, and troubleshooting**, I made the leap into cybersecurity.  
 
-- **Writeups:** My experiences with platforms like TryHackMe and HackTheBox.
-- **Notes:** Guides and notes on various cybersecurity topics and tools.
-- **Projects:** Insights into my network security analyses and automation scripts.
-- **Resources:** Great books, courses, and tools I've discovered along the way.
+In **December 2024**, I proudly **graduated with distinction** with a **Diploma of Cybersecurity** (GPA: **6.5**). Now, I'm actively expanding my knowledge and skillset through hands-on learning and certifications, including:  
 
-## Let's Connect
+- 🎓 **Google Cybersecurity Certificate (In Progress)**  
+- 🔐 **CompTIA Security+ (Studying for Exam)**  
 
-You can find me on [Twitter: @NodInfoSec](https://twitter.com/NodInfoSec). Feel free to reach out with any questions, suggestions, or just to say hi.
+I dedicate my time to **learning offensive and defensive security techniques**, exploring **SOC operations**, and working on **practical cybersecurity projects**.  
 
-Thanks for stopping by!
+## **Career Goals**  
+
+I'm actively looking for **an IT or cybersecurity role** where I can apply my skills and continue growing.  
+
+💼 **Ideal roles:**  
+- **Security Analyst / SOC Analyst** (preferred)  
+- **Helpdesk / IT Support** (to get my foot in the door)  
+
+I'm passionate about **threat detection, incident response, and network security**, and I’m excited to take the next step in my cybersecurity career.  
+
+## **What You'll Find Here**  
+
+This site serves as a **living journal** of my cybersecurity journey. Here’s what you can expect:  
+
+- 📝 **The Monthly Patch Blog** – Regular updates on my cybersecurity learning and career progress. (Check out the **Posts section** for the latest updates!)  
+- **Writeups** – My experiences with **TryHackMe, HackTheBox**, and cybersecurity labs.  
+- **Notes & Guides** – Deep dives into various **cybersecurity tools and concepts**.  
+- **Projects** – Hands-on work, including **network security analysis, SIEM labs, and automation scripts**.  
+- **Resources** – Books, courses, and tools that have helped me along the way.  
+
+## **Let’s Connect!**  
+
+I'm always open to **networking, collaborations, and learning opportunities**. Feel free to reach out!  
+
+🐦 **Twitter/X:** [@NodInfoSec](https://twitter.com/NodInfoSec) 
+
+Thanks for stopping by, and I hope you’ll follow along on **The Monthly Patch** to track my journey in cybersecurity! 🚀 
