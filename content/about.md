@@ -47,4 +47,4 @@ I'm always open to **networking, collaborations, and learning opportunities**. F
 
 🐦 **Twitter/X:** [@NodInfoSec](https://twitter.com/NodInfoSec) 
 
-Thanks for stopping by, and I hope you’ll follow along on **The Monthly Patch** to track my journey in cybersecurity! 🚀 
+Thanks for stopping by, and I hope you’ll follow along on [**The Monthly Patch**](https://nodonline.xyz/tags/the-monthly-patch/) to track my journey in cybersecurity! 🚀 
