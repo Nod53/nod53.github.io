@@ -115,7 +115,7 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2024
+    trademark = 2025
     rss = true
     copyright = true
     author = true
@@ -223,9 +223,9 @@ disableHugoGeneratorInject = false
     name = "twitter"
     url  = "https://twitter.com/NodInfoSec"
 
-  #[[params.social]]
-  #  name = "github"
-  #  url  = "https://github.com/Nod53"
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/Nod53"
 	
   [[params.social]]
     name = "discord"
