@@ -16,7 +16,6 @@ After a decade in **telecommunications**, where I built a solid foundation in **
 
 In **December 2024**, I proudly **graduated with distinction** with a **Diploma of Cybersecurity** (GPA: **6.5**). Now, I'm actively expanding my knowledge and skillset through hands-on learning and certifications, including:  
 
-- 🎓 **Google Cybersecurity Certificate (In Progress)**  
 - 🔐 **CompTIA Security+ (Studying for Exam)**  
 
 I dedicate my time to **learning offensive and defensive security techniques**, exploring **SOC operations**, and working on **practical cybersecurity projects**.  
@@ -27,7 +26,7 @@ I'm actively looking for **an IT or cybersecurity role** where I can apply my sk
 
 💼 **Ideal roles:**  
 - **Security Analyst / SOC Analyst** (preferred)  
-- **Helpdesk / IT Support** (to get my foot in the door)  
+- **Helpdesk / IT Support** 
 
 I'm passionate about **threat detection, incident response, and network security**, and I’m excited to take the next step in my cybersecurity career.  
 
