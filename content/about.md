@@ -14,9 +14,7 @@ Hey there! I'm **Jarrod**, but most folks know me as **Nod**. I'm a tech enthusi
 
 After a decade in **telecommunications**, where I built a solid foundation in **networking, IT support, and troubleshooting**, I made the leap into cybersecurity.  
 
-In **December 2024**, I proudly **graduated with distinction** with a **Diploma of Cybersecurity** (GPA: **6.5**). Now, I'm actively expanding my knowledge and skillset through hands-on learning and certifications, including:  
-
-- 🔐 **CompTIA Security+ (Studying for Exam)**  
+In **December 2024**, I proudly **graduated with distinction** with a **Diploma of Cybersecurity** (GPA: **6.5**). Now, I'm actively expanding my knowledge and skillset through hands-on learning and certifications.
 
 I dedicate my time to **learning offensive and defensive security techniques**, exploring **SOC operations**, and working on **practical cybersecurity projects**.  
 
