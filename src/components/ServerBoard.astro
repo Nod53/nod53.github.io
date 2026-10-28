@@ -1,0 +1,46 @@
+---
+import { servers, address } from '../data/servers';
+---
+<ul class="board">
+  {servers.map((s) => (
+    <li data-host={s.host} data-status={s.status}>
+      <span class="game">{s.game}</span>
+      <span class="addr"><code>{address(s)}</code><button type="button" data-copy={address(s)}>Copy</button></span>
+      <span class="status" data-state="unknown">{s.status === 'none' ? 'Listed' : 'Checking'}</span>
+      <span class="muted players"></span>
+    </li>
+  ))}
+</ul>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('button[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy ?? '');
+        btn.textContent = 'Copied';
+      } catch {
+        btn.textContent = 'Copy failed';
+      }
+      setTimeout(() => (btn.textContent = 'Copy'), 1500);
+    });
+  });
+
+  document.querySelectorAll<HTMLElement>('li[data-status="minecraft"]').forEach(async (row) => {
+    const status = row.querySelector<HTMLElement>('.status')!;
+    const players = row.querySelector<HTMLElement>('.players')!;
+    try {
+      const res = await fetch(`https://api.mcsrvstat.us/3/${row.dataset.host}`);
+      const data = await res.json();
+      if (data.online) {
+        status.dataset.state = 'online';
+        status.textContent = 'Online';
+        players.textContent = `${data.players?.online ?? 0}/${data.players?.max ?? '?'} players`;
+      } else {
+        status.dataset.state = 'offline';
+        status.textContent = 'Offline';
+      }
+    } catch {
+      status.textContent = 'Status unavailable';
+    }
+  });
+</script>

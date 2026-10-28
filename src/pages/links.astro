@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { links } from '../data/links';
+---
+<Base title="Links" description="Everywhere to find Caliban online.">
+  <h1>Links</h1>
+  <ul class="entries">
+    {links.map((l) => (
+      <li>
+        <h3><a href={l.url}>{l.label}</a></h3>
+        {l.note && <p>{l.note}</p>}
+      </li>
+    ))}
+  </ul>
+</Base>

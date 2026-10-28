@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import { tools } from '../data/tools';
+---
+<Base title="Tools" description="Small browser-based utilities.">
+  <h1>Tools</h1>
+  {tools.length === 0 ? (
+    <p class="empty">No tools yet. Add a page under <code>src/pages/tools/</code> and list it in <code>src/data/tools.ts</code>.</p>
+  ) : (
+    <ul class="entries">
+      {tools.map((t) => (
+        <li>
+          <h3><a href={t.url}>{t.name}</a></h3>
+          <p>{t.description}</p>
+        </li>
+      ))}
+    </ul>
+  )}
+</Base>

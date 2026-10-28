@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import { projects } from '../data/projects';
+---
+<Base title="Projects" description="Things I've built.">
+  <h1>Projects</h1>
+  {projects.length === 0 ? (
+    <p class="empty">No projects listed yet. Add one in <code>src/data/projects.ts</code>.</p>
+  ) : (
+    <ul class="entries">
+      {projects.map((p) => (
+        <li>
+          <h3>{p.name}</h3>
+          <p>{p.description}</p>
+          <p class="meta">
+            {p.repo && <a href={p.repo}>Source</a>}
+            {p.repo && p.demo && ' · '}
+            {p.demo && <a href={p.demo}>Live demo</a>}
+          </p>
+        </li>
+      ))}
+    </ul>
+  )}
+</Base>

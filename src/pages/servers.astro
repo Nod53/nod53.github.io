@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import ServerBoard from '../components/ServerBoard.astro';
+import { servers, address } from '../data/servers';
+---
+<Base title="Servers" description="Connection details and rules for the CalibanHQ game servers.">
+  <h1>Servers</h1>
+  <p class="lede">Copy an address, paste it into the game, and join.</p>
+  <ServerBoard />
+
+  <section>
+    {servers.map((s) => (
+      <div class="server-detail" id={s.game.toLowerCase()}>
+        <h2>{s.game}</h2>
+        <p>{s.blurb}</p>
+        <p>Connect to <code>{address(s)}</code></p>
+        {s.rules && (
+          <>
+            <h3>Rules</h3>
+            <ul>{s.rules.map((r) => <li>{r}</li>)}</ul>
+          </>
+        )}
+      </div>
+    ))}
+  </section>
+</Base>

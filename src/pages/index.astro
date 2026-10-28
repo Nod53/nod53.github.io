@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('writing')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const fmt = (d: Date) => d.toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title="Writing" description="Posts from CalibanHQ.">
+  <h1>Writing</h1>
+  <ul class="entries">
+    {posts.map((p) => (
+      <li>
+        <h3><a href={`/writing/${p.id}/`}>{p.data.title}</a></h3>
+        <p class="meta">{fmt(p.data.date)}</p>
+        <p>{p.data.description}</p>
+      </li>
+    ))}
+  </ul>
+</Base>
