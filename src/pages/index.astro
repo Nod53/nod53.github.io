@@ -1,19 +1,35 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Base from '../layouts/Base.astro';
+import Forest from '../components/Forest.astro';
+import ServerBoard from '../components/ServerBoard.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('writing')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const fmt = (d: Date) => d.toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' });
+const posts = (await getCollection('writing')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
 ---
-<Base title="Writing" description="Posts from CalibanHQ.">
-  <h1>Writing</h1>
-  <ul class="entries">
-    {posts.map((p) => (
-      <li>
-        <h3><a href={`/writing/${p.id}/`}>{p.data.title}</a></h3>
-        <p class="meta">{fmt(p.data.date)}</p>
-        <p>{p.data.description}</p>
-      </li>
-    ))}
-  </ul>
+<Base>
+  <section slot="hero" class="hero">
+    <div class="wrap hero-inner">
+      <h1>CalibanHQ</h1>
+      <p class="lede">Game servers, projects, writing and tools, all in one place.</p>
+    </div>
+    <Forest />
+  </section>
+
+  <section>
+    <h2>Game servers</h2>
+    <ServerBoard />
+    <p style="margin-top:1rem"><a href="/servers/">Rules and connection details</a></p>
+  </section>
+
+  <section>
+    <h2>Latest writing</h2>
+    <ul class="entries">
+      {posts.map((p) => (
+        <li>
+          <h3><a href={`/writing/${p.id}/`}>{p.data.title}</a></h3>
+          <p>{p.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
 </Base>
